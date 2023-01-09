@@ -9,13 +9,13 @@ self.addEventListener("message", function (event) {
 function addOneSecond(_a) {
     var hour = _a.hour, minute = _a.minute, second = _a.second;
     second++;
-    if (second > 60) {
+    if (second >= 60) {
         minute++;
         second = 0;
-        if (minute > 60) {
+        if (minute >= 60) {
             hour++;
             minute = 0;
-            if (hour > 24) {
+            if (hour >= 24) {
                 hour = 0;
             }
         }
