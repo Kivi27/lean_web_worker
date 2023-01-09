@@ -15,13 +15,13 @@ class Watch {
     }
 
     private initWorker() : void {
-        const dataObject : TimeFormat = {
+        const currentTime : TimeFormat = {
             "hour": this.hour,
             "minute": this.minute,
             "second": this.second,
         };
 
-        this.worker.postMessage(dataObject);
+        this.worker.postMessage(currentTime);
 
         this.worker.addEventListener("message", (event:MessageEvent) => {
             const newTime:TimeFormat = event.data;
