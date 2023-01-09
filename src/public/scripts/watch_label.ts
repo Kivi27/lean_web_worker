@@ -11,9 +11,19 @@ class WatchLabel {
         this.watch = watch;
 
         this.watch.setOnAddSecond((newTime:TimeFormat) => {
-            this.hourLabel.textContent = String(newTime.hour);
-            this.minuteLabel.textContent = String(newTime.minute);
-            this.secondLabel.textContent = String(newTime.second);
+            this.hourLabel.textContent = this.addAggregate(newTime.hour);
+            this.minuteLabel.textContent = this.addAggregate(newTime.minute);
+            this.secondLabel.textContent = this.addAggregate(newTime.second);
         });
+    }
+
+    private addAggregate(partTime:number) : string {
+        const aggregate:string = "0";
+        const lengthPartTime:number = 2;
+        const stringTime:string = String(partTime);
+
+        return stringTime.length < lengthPartTime
+            ? aggregate + stringTime
+            : stringTime;
     }
 }
