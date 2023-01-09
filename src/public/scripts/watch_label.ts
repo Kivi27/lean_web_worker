@@ -15,7 +15,5 @@ class WatchLabel {
             this.minuteLabel.textContent = String(newTime.minute);
             this.secondLabel.textContent = String(newTime.second);
         });
-
     }
-
 }

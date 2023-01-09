@@ -9,12 +9,12 @@ var Watch = /** @class */ (function () {
     }
     Watch.prototype.initWorker = function () {
         var _this = this;
-        var dataObject = {
+        var currentTime = {
             "hour": this.hour,
             "minute": this.minute,
             "second": this.second,
         };
-        this.worker.postMessage(dataObject);
+        this.worker.postMessage(currentTime);
         this.worker.addEventListener("message", function (event) {
             var newTime = event.data;
             _this.setTime(newTime);
