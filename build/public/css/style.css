@@ -1,0 +1,19 @@
+:root {
+    --color-separator: #E61109;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.watch {
+    font-family: "Comic Sans MS", serif;
+    font-size: 8rem;
+}
+
+.watch__separator {
+    color: var(--color-separator);
+}
