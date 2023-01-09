@@ -105,6 +105,3 @@ dist
 
 #ide setting
 .idea/
-
-#dynamic create script
-./build/public/scripts/
