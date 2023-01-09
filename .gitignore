@@ -107,4 +107,4 @@ dist
 .idea/
 
 #dynamic create script
-./build/scripts/
+./build/public/scripts/
